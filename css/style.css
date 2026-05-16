@@ -2488,7 +2488,7 @@ RESPONSIVE
         width:22%;
     }
 }
-
+.smart{width:50%; margin-top:30px}
 @media(max-width:767px){
     .sustainability-shape{
         width:28%;
@@ -2512,6 +2512,7 @@ RESPONSIVE
     .fotos{ grid-template-columns: repeat(2, 1fr)}
     .world-section{ padding-bottom: 30px; }
     .fotos div:last-child{ width: calc(200% + 20px); }
+    .smart{width:100%}
 }
 
 @media screen and (max-width: 800px) {
