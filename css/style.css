@@ -324,7 +324,7 @@ HERO
 
 .hero-title{
     font-size:70px;
-    line-height:1;
+    line-height:1.2;
     text-transform:uppercase;
     color:var(--blue-dark);
     white-space: nowrap;
