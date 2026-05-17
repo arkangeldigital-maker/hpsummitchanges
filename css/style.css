@@ -2528,6 +2528,9 @@ RESPONSIVE
     .fotos div:last-child{ width: calc(200% + 20px); }
     .smart{width:100%}
     .inside-arrow{top:45%}
+    .s-tech-content{margin-bottom:60px}
+    .s-tech-item{height:90px}
+    .hero-grid{ min-height:900px}
 }
 
 @media screen and (max-width: 800px) {
