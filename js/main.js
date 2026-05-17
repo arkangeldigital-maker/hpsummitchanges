@@ -184,7 +184,71 @@ $(document).ready(function () {
 
     /*
     ===================================
-    INSIDE SLIDER
+    SWIPE SUPPORT
+    ===================================
+    */
+    
+    function enableSwipe(container, onSwipeLeft, onSwipeRight) {
+    
+        let startX = 0;
+        let endX = 0;
+        let isDragging = false;
+    
+        container.on('touchstart mousedown', function (e) {
+    
+            isDragging = true;
+    
+            startX = e.type.includes('mouse')
+                ? e.pageX
+                : e.originalEvent.touches[0].clientX;
+    
+        });
+    
+        container.on('touchmove mousemove', function (e) {
+    
+            if (!isDragging) return;
+    
+            endX = e.type.includes('mouse')
+                ? e.pageX
+                : e.originalEvent.touches[0].clientX;
+    
+        });
+    
+        container.on('touchend mouseup mouseleave', function () {
+    
+            if (!isDragging) return;
+    
+            const diffX = startX - endX;
+    
+            /*
+            MIN SWIPE DISTANCE
+            */
+    
+            if (Math.abs(diffX) > 50) {
+    
+                if (diffX > 0) {
+    
+                    onSwipeLeft();
+    
+                } else {
+    
+                    onSwipeRight();
+    
+                }
+    
+            }
+    
+            isDragging = false;
+            startX = 0;
+            endX = 0;
+    
+        });
+    
+    }
+    
+    /*
+    ===================================
+    COBERTURA SLIDER
     ===================================
     */
 
@@ -338,6 +402,34 @@ $(document).ready(function () {
 
         /*
         ===================================
+        SWIPE COBERTURA
+        ===================================
+        */
+        
+        enableSwipe(
+        
+            $('#cobertura .inside-slider'),
+        
+            function () {
+        
+                currentCobertura++;
+        
+                updateSliderCobertura();
+        
+            },
+        
+            function () {
+        
+                currentCobertura--;
+        
+                updateSliderCobertura();
+        
+            }
+        
+        );
+
+        /*
+        ===================================
         INIT
         ===================================
         */
@@ -486,6 +578,34 @@ $(document).ready(function () {
 
         });
 
+        /*
+        ===================================
+        SWIPE INNOVACION
+        ===================================
+        */
+        
+        enableSwipe(
+        
+            $('#innovacion .inside-slider'),
+        
+            function () {
+        
+                currentinnovacion++;
+        
+                updateSliderinnovacion();
+        
+            },
+        
+            function () {
+        
+                currentinnovacion--;
+        
+                updateSliderinnovacion();
+        
+            }
+        
+        );
+        
         /*
         ===================================
         INIT
