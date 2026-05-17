@@ -2527,6 +2527,7 @@ RESPONSIVE
     .world-section{ padding-bottom: 30px; }
     .fotos div:last-child{ width: calc(200% + 20px); }
     .smart{width:100%}
+    .inside-arrow{top:45%}
 }
 
 @media screen and (max-width: 800px) {
