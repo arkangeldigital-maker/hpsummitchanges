@@ -2515,7 +2515,7 @@ RESPONSIVE
     .innova{ margin-left: 20px; }
     .section-heading h3 img{ height: 26px; }
     #innovacion .inside-card {
-        flex: 0 0 calc(50% - 4px);
+        flex: 0 0 calc(100% - 4px);
     }
     #innovacion .inside-next{ right: -30px; }
     #innovacion .inside-prev{ left: -30px; }
