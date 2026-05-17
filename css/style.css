@@ -2502,7 +2502,7 @@ RESPONSIVE
         width:22%;
     }
 }
-.smart{width:50%; margin-top:50px}
+.smart{width:50%; margin-top:50px; margin-bottom:20px}
 @media(max-width:767px){
     .sustainability-shape{
         width:28%;
